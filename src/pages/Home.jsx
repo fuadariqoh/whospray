@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
+import photos1 from "../images/image1.jpeg";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -11,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
   container1: {
     height: "500px",
     border: "1px solid black",
+    display: "flex",
+    justifyContent: "space-around",
 
     [theme.breakpoints.down("md")]: {
       height: "100px",
@@ -18,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
       height: "fit-content",
     },
+  },
+  photo: {
+    height: "400px",
   },
 }));
 
@@ -31,12 +37,12 @@ const Home = () => {
         className={classes.container1}
         md="12"
       >
-        <div>Foto Product</div>
+        <div>
+          <img src={photos1} className={classes.photo} />
+        </div>
         <div style={{ fontSize: "14px" }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
-          rerum cum animi aliquid reiciendis mollitia voluptas libero
-          accusantium neque iusto qui fuga, eaque voluptatem est enim nihil
-          repellat laboriosam nobis.
+          <h1>WHO Nano Spray</h1>
+          <div>asd</div>
         </div>
       </Grid>
       <Grid container justify="center" direction="column">
